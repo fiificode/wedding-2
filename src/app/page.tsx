@@ -2,7 +2,7 @@ import { Hero } from "@/components/wedding/hero";
 import { Venue } from "@/components/wedding/venue";
 import { Rsvp } from "@/components/wedding/rsvp";
 import { DressCode } from "@/components/wedding/dress-code";
-import { Gifts } from "@/components/wedding/gifts";
+import { Contacts } from "@/components/wedding/contacts";
 import { Blessings } from "@/components/wedding/blessings";
 import { Footer } from "@/components/wedding/footer";
 import { MusicToggle } from "@/components/wedding/music-toggle";
@@ -14,7 +14,7 @@ export default function Home() {
       <Venue />
       <Rsvp />
       <DressCode />
-      <Gifts />
+      <Contacts />
       <Blessings />
       <Footer />
       <MusicToggle />

@@ -23,7 +23,7 @@ Only **one** template: a single mobile-first page, content column `max-w-[480px]
 | 3 | Venue & Directions | eyebrow with gold `rule-line` rules either side, Google Maps iframe (220px), "Get Directions" outline button |
 | 4 | RSVP | frosted card form: name, phone, "Who do you know?" select (4 options), submit button |
 | 5 | Dress Code | "A Touch of White" + three colour swatches (white / ivory / cream) |
-| 6 | Gifts & Support | 3 frosted cards (Mobile money, Bank transfer, Interac) each with COPY button |
+| 6 | (Gifts & Support removed by request; RSVP Contacts kept as its own block) | |
 | 7 | RSVP Contacts | 3 phone links |
 | 8 | Prayers & Blessings | "Send blessing" form + long scrolling guestbook list (~2,400px) |
 | 9 | Footer | "B & H", sign-off line, floral corner (bottom-right, rotated 180°, 60% opacity), music toggle button 🔊 (fixed) |

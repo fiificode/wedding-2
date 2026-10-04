@@ -28,10 +28,10 @@ export default function StyleGuide() {
 
       <section className="space-y-3">
         <h2 className="eyebrow text-gold">Type</h2>
-        <p className="font-script text-6xl leading-tight">Ben &amp; Hannah</p>
+        <p className="font-script text-6xl leading-tight">Marcus &amp; Naomi</p>
         <p className="font-script text-[2.04rem] leading-tight text-gold">A Touch of White</p>
-        <p className="font-display text-2xl font-bold tracking-[0.12em]">BENJAMIN</p>
-        <p className="font-display text-xl">Love Economy Church</p>
+        <p className="font-display text-2xl font-bold tracking-[0.12em]">MARCUS</p>
+        <p className="font-display text-xl">Grace Chapel</p>
         <p className="font-display text-base italic">With love</p>
         <p className="text-sm text-muted-foreground">Body, Jost 300 / 14px muted</p>
         <p className="eyebrow text-gold">Eyebrow — Save the date</p>
