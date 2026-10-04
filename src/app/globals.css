@@ -1,26 +1,111 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-gold: var(--gold);
+  --color-glass: var(--glass);
+  --color-glass-border: var(--glass-border);
+
+  --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-script: var(--font-beau-rivage), var(--font-cormorant), cursive;
+  --font-heading: var(--font-display);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* The source site is dark-only. Values below are read from its computed `.dark` tokens. */
+:root {
+  --radius: 0.875rem;
+  --background: oklch(21.92% 0.0165 58);
+  --foreground: oklch(94.18% 0.0138 90);
+  --card: oklch(27.12% 0.0175 58);
+  --card-foreground: oklch(94.18% 0.0138 90);
+  --popover: oklch(27.12% 0.0175 58);
+  --popover-foreground: oklch(94.18% 0.0138 90);
+  --primary: oklch(94.18% 0.0138 90);
+  --primary-foreground: oklch(21.92% 0.0165 58);
+  --secondary: oklch(31% 0.019 58);
+  --secondary-foreground: oklch(94.18% 0.0138 90);
+  --muted: oklch(31% 0.019 58);
+  --muted-foreground: oklch(75% 0.018 82);
+  --accent: oklch(73.65% 0.0824 81);
+  --accent-foreground: oklch(21.92% 0.0165 58);
+  --destructive: oklch(55% 0.17 27);
+  --border: oklch(73.65% 0.0824 81 / 0.3);
+  --input: oklch(73.65% 0.0824 81 / 0.34);
+  --ring: oklch(73.65% 0.0824 81);
+
+  --gold: oklch(75.62% 0.0854 82);
+  --glass: oklch(32% 0.018 58 / 0.58);
+  --glass-border: oklch(73.65% 0.0824 81 / 0.22);
+  --shadow-frost: 0 10px 30px -12px oklch(12% 0.01 58 / 0.6);
+
+  --swatch-white: oklch(98.5% 0.004 90);
+  --swatch-ivory: oklch(94.5% 0.018 85);
+  --swatch-cream: oklch(89.8% 0.03 78);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-background text-foreground font-light;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .frost {
+    background-color: var(--glass);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-frost);
+    border-radius: var(--radius-xl);
+  }
+  .eyebrow {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.34em;
+    font-size: 0.68rem;
+    font-weight: 300;
+  }
+  .rule-line {
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    flex: 1;
+    height: 1px;
+    display: block;
+  }
 }

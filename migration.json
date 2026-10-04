@@ -1,0 +1,34 @@
+{
+  "source": "https://benwedshannah.lovable.app",
+  "phases": {
+    "survey": "done",
+    "designSystem": "done",
+    "homepage": "built-awaiting-review",
+    "otherTemplates": "not-applicable",
+    "remainder": "pending"
+  },
+  "doing": "",
+  "notDone": ["Real submission backend", "Replace placeholder content in src/content/wedding.ts", "Frame-level check of the music autoplay and countdown on a real phone"],
+  "needsYou": [
+    {
+      "id": "personal-data",
+      "question": "The page contains real bank/mobile-money/email details, phone numbers and guests' messages. Copy them or use placeholders?",
+      "recommendation": "Placeholders. Put the real values in a content file you fill in yourself, so nothing sensitive is copied from someone else's page."
+    },
+    {
+      "id": "assets",
+      "question": "Couple photo, floral corner image and music track: which to use?",
+      "recommendation": "You supply your own photo and music (drop into /public). I will recreate the floral corner as an SVG/placeholder."
+    },
+    {
+      "id": "backend",
+      "question": "Where should RSVP and blessings submissions go?",
+      "recommendation": "Next.js route handlers writing to a Supabase table (same as source) or a simple JSON/DB; I will stub with local state until you choose."
+    },
+    {
+      "id": "names",
+      "question": "Keep the couple's names/date/venue as on the original, or make them editable placeholders?",
+      "recommendation": "Single config file (content.ts) holding names, date, venue, so you can change everything in one place."
+    }
+  ]
+}
